@@ -1,0 +1,453 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  background-color: #f0f4ff; /* Menambahkan background agar navbar terlihat */
+  box-shadow: 0 4px 6px rgba(65, 54, 54, 0.1); /* Menambahkan bayangan agar navbar terlihat lebih menonjol */
+  z-index: 1000; /* Agar selalu di atas elemen lain */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  margin: 0 15px;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Menambahkan transisi yang halus */
+  font-size: 18px;
+}
+
+.navbar a.active {
+  color: purple;
+  border-bottom: 2px solid purple;
+}
+
+.navbar a:hover {
+  color: purple; /* Mengubah warna teks saat hover */
+  border-bottom: 2px solid purple; /* Menambahkan underline saat hover */
+}
+.logo{
+  padding-left: 40px;
+}
+
+
+
+.inner-header{
+  display: flex;
+  justify-content: space-around;
+  padding-left: 300px;
+  margin-left: 30px;
+}
+.inner-header .text{
+  font-family: "Playfair", serif;
+  font-size: 40px;
+}
+
+.text button:hover{
+  border: 3px solid rgb(149, 4, 168);
+  background-color: transparent;
+  font-weight: 700;
+  color: rgb(135, 4, 168);
+
+}
+
+.heads{
+  color: purple;
+}
+.text p{
+  margin-top: 22px;
+  font-family: "Source Code Pro", monospace;
+}
+.text h2{
+  color: rgb(63, 63, 63);
+}
+.text button{
+  width: 140px;
+  height: 40px;
+  margin-top: 23px;
+  background-color: rgb(116, 2, 131);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.text h1{
+  font-size: 54px;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgb(88, 72, 146) 0%,
+    rgb(187, 105, 183) 100%
+  );
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height: 80vh; /* Sesuaikan tinggi header sesuai kebutuhan Anda */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 30vh; /* Tinggi diperpanjang untuk gelombang */
+  margin-bottom: -10px; /* Perbaiki jarak bawah */
+  min-height: 150px;
+  max-height: 300px; /* Dapat disesuaikan untuk memperpanjang lebih banyak */
+}
+.content {
+  position: relative;
+  height: 25vh; /* Tinggi konten disesuaikan agar tidak terlalu kecil */
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* /* Shrinking for mobile */
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.head{
+  text-align: center;
+  padding: 44px;
+  margin-top: 11px;
+  font-family: "Poppins", sans-serif;
+}
+.head span{
+  color: rgb(130, 4, 155);
+  font-family: "Poppins", sans-serif;
+}
+
+.product-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the grid container horizontally */
+}
+
+.product-showcase {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effect */
+}
+
+.product-showcase:hover {
+  transform: scale(1.05); /* Slightly increase the size on hover */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Darker and larger shadow on hover */
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.1em;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #2980b9;
+}
+/* Cart Icon */
+.cart-icon-container {
+  position: flex;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#cart-icon {
+  font-size: 2rem;
+  color: #353432;
+}
+
+#cart-count {
+  margin-left: 5px;
+  font-size: 1.2rem;
+  color: #353432;
+}
+
+/* Cart Modal */
+/* Cart Modal */
+.cart-modal {
+  display: none;  /* Modal disembunyikan secara default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Background transparan */
+  overflow: auto;  /* Agar modal dapat digulir jika terlalu besar */
+}
+
+/* Konten Modal */
+.cart-modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative; /* Supaya tombol close ada di posisi relatif */
+}
+
+/* Tombol Close */
+.close-btn {
+  font-size: 2rem;
+  color: #353432;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn:hover {
+  color: red; /* Efek hover untuk tombol close */
+}
+
+#checkout-btn {
+  background-color: #353432;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#checkout-btn:hover {
+  color: red;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.intro-text {
+  max-width: 100%;
+  text-align: left;
+  padding-right: 150px;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.intro-text h1 span {
+  color: white;
+  font-size: 80px;
+}
+
+.intro-text p {
+  font-size: 24px;
+  color: #333;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: purple;
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.intro-image {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-image img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.intro-image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  background-color: rgb(131, 25, 131);
+  border-radius: 50%;
+  z-index: -1;
+}
+.about-section {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 450px;
+}
+
+.about-section h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.about-section h1 span {
+  color: #8A2BE2;
+}
+
+.about-section .line {
+  width: 100px;
+  height: 5px;
+  background-color: #110E75;
+  margin: 20px auto;
+}
+
+.about-section .content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.about-section .content div {
+  width: 30%;
+  text-align: center;
+}
+
+.about-section .content div i {
+  font-size: 40px;
+  color: #4B0082;
+  margin-bottom: 20px;
+}
+
+.about-section .content div p {
+  font-size: 18px;
+  color: #333;
+}
+
+.about-section .content div span {
+  font-weight: 700;
+  color: #8A2BE2;
+}
+

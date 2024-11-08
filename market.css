@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    position: sticky;
+    top: 0;
+    background-color: #f0f4ff; /* Menambahkan background agar navbar terlihat */
+    box-shadow: 0 4px 6px rgba(65, 54, 54, 0.1); /* Menambahkan bayangan agar navbar terlihat lebih menonjol */
+    z-index: 1000; /* Agar selalu di atas elemen lain */
+    padding-right: 100px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Menambahkan transisi yang halus */
+    font-size: 18px;
+  }
+  
+  .navbar a.active {
+    color: purple;
+    border-bottom: 2px solid purple;
+  }
+  
+  .navbar a:hover {
+    color: purple; /* Mengubah warna teks saat hover */
+    border-bottom: 2px solid purple; /* Menambahkan underline saat hover */
+  }
+  .logo{
+    padding-left: 40px;
+  }
+
+  .head{
+    text-align: center;
+    padding: 44px;
+    margin-top: 11px;
+    font-family: "Poppins", sans-serif;
+  }
+  .head span{
+    color: rgb(130, 4, 155);
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .product-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid container horizontally */
+  }
+  
+  .product-showcase {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effect */
+  }
+  
+  .product-showcase:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Darker and larger shadow on hover */
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .product-details {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-title {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .product-price {
+    font-size: 1.1em;
+    color: #e74c3c;
+    margin-bottom: 15px;
+  }
+  
+  .buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background-color: #2980b9;
+  }
+  /* Cart Icon */
+  .cart-icon-container {
+    position: flex;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  #cart-icon {
+    font-size: 2rem;
+    color: #353432;
+  }
+  
+  #cart-count {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    color: #353432;
+  }
+  
+  /* Cart Modal */
+  /* Cart Modal */
+  .cart-modal {
+    display: none;  /* Modal disembunyikan secara default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Background transparan */
+    overflow: auto;  /* Agar modal dapat digulir jika terlalu besar */
+  }
+  
+  /* Konten Modal */
+  .cart-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative; /* Supaya tombol close ada di posisi relatif */
+  }
+  
+  /* Tombol Close */
+  .close-btn {
+    font-size: 2rem;
+    color: #353432;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .close-btn:hover {
+    color: red; /* Efek hover untuk tombol close */
+  }
+  
+  #checkout-btn {
+    background-color: #353432;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #checkout-btn:hover {
+    color: red;
+  }
+  
